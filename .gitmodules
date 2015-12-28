@@ -1,0 +1,66 @@
+[submodule "antigen"]
+	path = antigen
+	url = https://github.com/zsh-users/antigen.git
+[submodule ".tmux/plugins/tmux-battery"]
+	path = .tmux/plugins/tmux-battery
+	url = https://github.com/tmux-plugins/tmux-battery
+[submodule ".vim/vim-pathogen"]
+	path = .vim/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
+[submodule ".vim/bufstop"]
+	path = .vim/bufstop
+	url = https://github.com/mihaifm/bufstop
+[submodule ".vim/goyo.vim"]
+	path = .vim/goyo.vim
+	url = https://github.com/junegunn/goyo.vim
+[submodule ".vim/gruvbox"]
+	path = .vim/gruvbox
+	url = https://github.com/morhetz/gruvbox
+[submodule ".vim/lightline.vim"]
+	path = .vim/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule ".vim/python-mode"]
+	path = .vim/python-mode
+	url = https://github.com/klen/python-mode
+[submodule ".vim/riv.vim"]
+	path = .vim/riv.vim
+	url = https://github.com/Rykka/riv.vim
+[submodule ".vim/vim-bufkill"]
+	path = .vim/vim-bufkill
+	url = https://github.com/qpkorr/vim-bufkill
+[submodule ".vim/scvim"]
+	path = .vim/scvim
+	url = https://github.com/sbl/scvim
+[submodule ".vim/vim-clojure-static"]
+	path = .vim/vim-clojure-static
+	url = https://github.com/guns/vim-clojure-static
+[submodule ".vim/vim-faust"]
+	path = .vim/vim-faust
+	url = https://github.com/gmoe/vim-faust
+[submodule ".vim/vim-fireplace"]
+	path = .vim/vim-fireplace
+	url = https://github.com/tpope/vim-fireplace
+[submodule ".vim/vim-glsl"]
+	path = .vim/vim-glsl
+	url = https://github.com/tikhomirov/vim-glsl
+[submodule ".vim/vim-salve"]
+	path = .vim/vim-salve
+	url = https://github.com/tpope/vim-salve
+[submodule ".vim/vim-lilypond"]
+	path = .vim/vim-lilypond
+	url = https://github.com/cg433n/vim-lilypond
+[submodule ".vim/vim-markdown"]
+	path = .vim/vim-markdown
+	url = https://github.com/tpope/vim-markdown
+[submodule ".vim/vim-niji"]
+	path = .vim/vim-niji
+	url = https://github.com/raymond-w-ko/vim-niji
+[submodule ".vim/vim-scala"]
+	path = .vim/vim-scala
+	url = https://github.com/derekwyatt/vim-scala/
+[submodule ".vim/vim-startify"]
+	path = .vim/vim-startify
+	url = https://github.com/mhinz/vim-startify
+[submodule ".vim/vim-vinegar"]
+	path = .vim/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar
