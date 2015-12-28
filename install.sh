@@ -1,12 +1,13 @@
 #!/bin/bash
 
-echo Installing dotfiles...
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+echo Installing dotfiles...
+
 # vim
 ln -s ${BASEDIR}/.vimrc ~/.vimrc
-ln -s ${BASEDIR}/.vim/ ~/.vim
+ln -s ${BASEDIR}/.vim/ ~/.vim/bundle
 
 # zsh
 ln -s ${BASEDIR}/.zshrc ~/.zshrc
