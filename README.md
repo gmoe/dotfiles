@@ -9,7 +9,7 @@ isolated directory and sym-linked to their required locations.
 Clone this repository into your home directory and run the installation script:
 
 ```sh
-git clone --recursive https://github.com/gmoe/dotfiles ~/.dotfiles
+git clone https://github.com/gmoe/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 ./install.sh
 ```
