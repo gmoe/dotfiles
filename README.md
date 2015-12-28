@@ -8,9 +8,11 @@ isolated directory and sym-linked to their required locations.
 
 Clone this repository into your home directory and run the installation script:
 
-  git clone https://github.com/gmoe/dotfiles ~/.dotfiles
-  cd ~/.dotfiles
-  ./install.sh
+```sh
+git clone https://github.com/gmoe/dotfiles ~/.dotfiles
+cd ~/.dotfiles
+./install.sh
+```
 
 Local customizations can be made by editing these files:
   
