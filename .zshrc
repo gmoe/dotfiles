@@ -30,8 +30,14 @@ antigen theme robbyrussell
 # Tell antigen that you're done.
 antigen apply
 
-export LS_COLORS="dxfxgxdxexcxGxxxxxxxxx"
 export CLICOLOR="xterm-color"
+
+# OS X / BSD colors for ls
+export LSCOLORS="dxfxgxdxexcxGxxxxxxxxx"
+
+# UNIX colors for ls
+export LS_COLORS="di=1;34:fi=0:ln=31:pi=36:so=36:bd=36:cd=36:or=31:mi=33:ex=35:*.rpm=90"
+
 export EDITOR="vim"
 export DISABLE_AUTO_TITLE="true"
 
