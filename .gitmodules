@@ -64,3 +64,6 @@
 [submodule ".vim/vim-vinegar"]
 	path = .vim/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar
+[submodule ".vim/hasksyn"]
+	path = .vim/hasksyn
+	url = https://github.com/travitch/hasksyn
