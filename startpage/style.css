@@ -1,0 +1,103 @@
+* {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  text-decoration: none;
+}
+
+html,body {
+  margin: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: auto;
+}
+
+body {
+  position:absolute; top:0; bottom:0; right:0; left:0;
+
+  /* Adapted from: http://codepen.io/yoksel/pen/iAerl */
+  background: linear-gradient(to right top, rgba(242, 56, 90, 0) 3.49515em, #F2385A 3.49515em, #F2385A, #d00e31 9.3016em, rgba(242, 56, 90, 0) 9.3016em) 0 0,
+  linear-gradient(to left top, rgba(242, 56, 90, 0) 3.49515em, #F2385A 3.49515em, #F2385A, #d00e31 9.3016em, rgba(242, 56, 90, 0) 9.3016em) 0 0, 
+  linear-gradient(to right bottom, rgba(242, 56, 90, 0) 3.49515em, #d00e31 3.49515em, #F2385A, #F2385A 9.3016em, rgba(242, 56, 90, 0) 9.3016em) 18em 0,
+  linear-gradient(to left bottom, rgba(242, 56, 90, 0) 3.49515em, #d00e31 3.49515em, #F2385A, #F2385A 9.3016em, rgba(242, 56, 90, 0) 9.3016em) 18em 0,
+  linear-gradient(to right top, rgba(245, 165, 3, 0) 3.49515em, #F5A503 3.49515em, #F5A503, #c38302 9.3016em, rgba(245, 165, 3, 0) 9.3016em) 0 6.96774em,
+  linear-gradient(to left top, rgba(245, 165, 3, 0) 3.49515em, #F5A503 3.49515em, #F5A503, #c38302 9.3016em, rgba(245, 165, 3, 0) 9.3016em) 0 6.96774em,
+  linear-gradient(to right bottom, rgba(245, 165, 3, 0) 3.49515em, #c38302 3.49515em, #F5A503, #F5A503 9.3016em, rgba(245, 165, 3, 0) 9.3016em) 18em 6.96774em,
+  linear-gradient(to left bottom, rgba(245, 165, 3, 0) 3.49515em, #c38302 3.49515em, #F5A503, #F5A503 9.3016em, rgba(245, 165, 3, 0) 9.3016em) 18em 6.96774em,
+  linear-gradient(to right top, rgba(233, 241, 223, 0) 3.49515em, #E9F1DF 3.49515em, #E9F1DF, #c4daaa 9.3016em, rgba(233, 241, 223, 0) 9.3016em) 0 13.93548em,
+  linear-gradient(to left top, rgba(233, 241, 223, 0) 3.49515em, #E9F1DF 3.49515em, #E9F1DF, #c4daaa 9.3016em, rgba(233, 241, 223, 0) 9.3016em) 0 13.93548em,
+  linear-gradient(to right bottom, rgba(233, 241, 223, 0) 3.49515em, #c4daaa 3.49515em, #E9F1DF, #E9F1DF 9.3016em, rgba(233, 241, 223, 0) 9.3016em) 18em 13.93548em,
+  linear-gradient(to left bottom, rgba(233, 241, 223, 0) 3.49515em, #c4daaa 3.49515em, #E9F1DF, #E9F1DF 9.3016em, rgba(233, 241, 223, 0) 9.3016em) 18em 13.93548em,
+  linear-gradient(to right top, rgba(74, 217, 217, 0) 3.49515em, #4AD9D9 3.49515em, #4AD9D9, #25b1b1 9.3016em, rgba(74, 217, 217, 0) 9.3016em) 0 20.90323em,
+  linear-gradient(to left top, rgba(74, 217, 217, 0) 3.49515em, #4AD9D9 3.49515em, #4AD9D9, #25b1b1 9.3016em, rgba(74, 217, 217, 0) 9.3016em) 0 20.90323em,
+  linear-gradient(to right bottom, rgba(74, 217, 217, 0) 3.49515em, #25b1b1 3.49515em, #4AD9D9, #4AD9D9 9.3016em, rgba(74, 217, 217, 0) 9.3016em) 18em 20.90323em,
+  linear-gradient(to left bottom, rgba(74, 217, 217, 0) 3.49515em, #25b1b1 3.49515em, #4AD9D9, #4AD9D9 9.3016em, rgba(74, 217, 217, 0) 9.3016em) 18em 20.90323em,
+  linear-gradient(to right top, rgba(54, 177, 191, 0) 3.49515em, #36B1BF 3.49515em, #36B1BF, #257a83 9.3016em, rgba(54, 177, 191, 0) 9.3016em) 0 27.87097em,
+  linear-gradient(to left top, rgba(54, 177, 191, 0) 3.49515em, #36B1BF 3.49515em, #36B1BF, #257a83 9.3016em, rgba(54, 177, 191, 0) 9.3016em) 0 27.87097em,
+  linear-gradient(to right bottom, rgba(54, 177, 191, 0) 3.49515em, #257a83 3.49515em, #36B1BF, #36B1BF 9.3016em, rgba(54, 177, 191, 0) 9.3016em) 18em 27.87097em,
+  linear-gradient(to left bottom, rgba(54, 177, 191, 0) 3.49515em, #257a83 3.49515em, #36B1BF, #36B1BF 9.3016em, rgba(54, 177, 191, 0) 9.3016em) 18em 27.87097em;
+
+  background-color: linen;
+  background-size: 36em 36em;
+}
+
+#wrapper {
+  margin: 0;
+  font-weight: 100;
+  font-size: 1.5em;
+  color: white;
+}
+
+#date {
+  display: inline-block;
+  margin: 0;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1.75em;
+  font-weight: 100;
+  background: #333;
+  padding: 20px;
+}
+
+#content {
+  margin-top: 20px;
+  padding: 20px;
+  background: #333;
+}
+
+#links {
+  width: 100%;
+  table-layout: fixed;
+}
+
+#links tr td {
+  vertical-align: top;
+}
+
+.section-header {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1.75em;
+  font-weight: 200;
+  color: white;
+}
+
+.section {
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0;
+}
+
+.section li {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  /* background-color: #2c2c2c; */
+  box-shadow: 0 0 4px 0 #111 inset; 
+}
+
+.section a {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1.5em;
+  font-weight: 100;
+  letter-spacing: 1px;
+  color: white;
+}
