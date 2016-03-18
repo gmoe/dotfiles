@@ -108,6 +108,9 @@ endfunc
 " Enter will clear search highlighting
 noremap <CR> :noh<CR>
 
+" Disable the annoying help function on <F1>
+nmap <F1> <nop>
+
 " }}}
 " Visual + Colorscheme {{{
 
