@@ -174,9 +174,10 @@ let g:lightline = {
     \	'modified': 'MyModified',
     \	'readonly': 'MyReadonly',
     \ },
-    \ 'separator': { 'right': '', 'left': '' },
-    \ 'subseparator': { 'right': '', 'left': '' }
     \ }
+
+    "\ 'separator': { 'right': '', 'left': '' },
+    "\ 'subseparator': { 'right': '', 'left': '' }
 
 function! MyFugitive()
   if exists("*fugitive#head")
