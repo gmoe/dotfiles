@@ -58,6 +58,9 @@ set autoread
 " Change the .md extension to Markdown
 autocmd BufRead,BufNew *.md set filetype=markdown
 
+" Associate *.vstxml with XML syntax
+autocmd BufRead,BufNew *.vstxml set filetype=xml
+
 " Enable wildmenu for better autocompletion
 set wildmenu
 
