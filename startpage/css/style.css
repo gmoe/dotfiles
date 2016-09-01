@@ -58,6 +58,17 @@ body {
   padding: 20px;
 }
 
+#weather {
+  display: inline-block;
+  float: right;
+  margin: 1;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1.75em;
+  font-weight: 100;
+  background: #333;
+  padding: 20px;
+}
+
 #content {
   margin-top: 20px;
   padding: 20px;

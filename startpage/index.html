@@ -2,62 +2,21 @@
 <head>
   <title>Home</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script>
-    "use strict";	
-		(function() {
-		var canvas = document.createElement('canvas');
-    var size = 32;
-    canvas.width = size; canvas.height = size;
-    var ctx = canvas.getContext('2d');
-		ctx.fillStyle = "#FFF";
-		ctx.fillRect(0, 0, 64, 64);
-
-    var colors = ['242,56,90', '245,165,3', '233,241,223', '74,217,217', '54,177,191'];
-
-    var lineWidth = (size*2)/colors.length;
-
-    for(var i=0; i < colors.length; i++) {
-      ctx.strokeStyle = 'rgb('+colors[i]+')';
-      ctx.lineWidth = lineWidth + 2;
-      ctx.beginPath();
-      ctx.moveTo(0,lineWidth*(i+1)+2);
-      ctx.lineTo(lineWidth*(i+1)+2,0);
-      ctx.stroke();
-    }
-
-		var link = document.createElement('link');
-		link.type = 'image/x-icon';
-		link.rel = 'shortcut icon';
-		link.href = canvas.toDataURL("image/x-icon");
-		document.getElementsByTagName('head')[0].appendChild(link);
-		}());
-  </script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/weather-icons.min.css">
+  <script src="js/icon.js"></script>
 </head>
 
 <body>
   <div id="wrapper">
   <h1 id="date">
-		<script>
-      "use strict";
-      (function() {
-        mDate(); setInterval(mDate, 1000);
-
-        function mDate() {
-          var d = new Date();
-          var mDate = d.getDate();
-          var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-          var m = d.getMonth();
-          var y = d.getFullYear();
-          var h = d.getHours();
-          var min = d.getMinutes(); 
-          min = (min < 10) ? "0"+min : min;
-          var meri = (h >= 12) ? "pm" : "am";
-          document.getElementById("date").innerHTML = (mDate+" "+months[m]+" "+y+" | "+((h > 12) ? h%12 : h)+":"+min+meri);
-        }
-      }());
-		</script>
+		<script src="js/date.js"></script>
   </h1>
+
+  <h2 id="weather">
+    Loading...
+  </h1>
+  <script src="js/weather.js"></script>
 
   <div id="content">
     <table id="links"><tr>
@@ -72,10 +31,8 @@
         <td><span class="section-header">Music:</span>
           <ul class="section">
             <a href="http://createdigitalmusic.com/"><li>Create Digital Music</li></a>
-            <a href="http://www.metalsucks.net/"><li>MetalSucks</li></a>
             <a href="http://www.synthtopia.com/"><li>Synthtopia</li></a>
             <a href="https://www.muffwiggler.com/forum/"><li>Muff Wiggler</li></a>
-            <a href="http://theproaudiofiles.com/"><li>The Pro Audio Files</li></a>
             <a href="http://matrixsynth.com/"><li>MATRIXSYNTH</li></a>
             <a href="http://llllllll.co/"><li>Lines</li></a>
             <a href="http://www.kvraudio.com/"><li>KVR</li></a>
