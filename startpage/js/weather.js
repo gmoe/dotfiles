@@ -27,7 +27,7 @@ xhr.ontimeout = function() {
   document.getElementById("weather").style.visibility = "hidden";
 }
 
-xhr.timeout = 1000;
+xhr.timeout = 2000;
 xhr.open("GET", url);
 xhr.responseType = "document";
 xhr.send();
