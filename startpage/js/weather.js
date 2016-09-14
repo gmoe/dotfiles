@@ -5,8 +5,11 @@
 var lat = 41.9905;
 var lon = -87.7049;
 var weatherURL = "http://forecast.weather.gov/MapClick.php?";
-var weatherData = "lat="+lat+"&lon="+lon+"&unit=0&lg=english&FcstType=xml";
-var url = weatherURL + weatherData;
+var weatherData = "lat="+lat+"&lon="+lon;
+
+document.getElementById("weather-link").href = weatherURL + weatherData;
+
+var url = weatherURL + weatherData + "&unit=0&lg=english&FcstType=xml";
 var xhr = new XMLHttpRequest();
 
 xhr.onload = function() {
@@ -33,8 +36,15 @@ xhr.responseType = "document";
 xhr.send();
 
 function insertIcon(weather) {
-  var ext = weather.indexOf(".png");
-  switch(weather.slice(17,ext)) {
+  var regex1 = /newimages\/medium\/(\w+).png/;
+  var regex2 = /DualImage\.php\?i=(\w+)&/;
+
+  var image = regex1.exec(weather);
+  if(image == null) {
+    image = regex2.exec(weather);
+  }
+
+  switch(image[1]) {
     case "bkn":
     case "few":
     case "sct":
@@ -71,6 +81,7 @@ function insertIcon(weather) {
       return "wi-night-alt-rain-mix";
     case "ra":
     case "ra1":
+    case "hra":
     case "shra":
       return "wi-day-rain";
     case "nra":

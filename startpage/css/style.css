@@ -12,6 +12,10 @@ html,body {
   height: auto;
 }
 
+a {
+  color: white;
+}
+
 body {
   position:absolute; top:0; bottom:0; right:0; left:0;
 
@@ -68,6 +72,7 @@ body {
   background: #333;
   padding: 20px;
 }
+
 
 #content {
   margin-top: 20px;
