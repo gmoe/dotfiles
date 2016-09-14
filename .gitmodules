@@ -10,6 +10,7 @@
 [submodule ".vim/bufstop"]
 	path = .vim/bufstop
 	url = https://github.com/mihaifm/bufstop
+  ignore = dirty
 [submodule ".vim/goyo.vim"]
 	path = .vim/goyo.vim
 	url = https://github.com/junegunn/goyo.vim
@@ -28,6 +29,7 @@
 [submodule ".vim/vim-bufkill"]
 	path = .vim/vim-bufkill
 	url = https://github.com/qpkorr/vim-bufkill
+  ignore = dirty
 [submodule ".vim/scvim"]
 	path = .vim/scvim
 	url = https://github.com/sbl/scvim
