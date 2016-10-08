@@ -56,10 +56,10 @@ set synmaxcol=256
 set autoread
 
 " Change the .md extension to Markdown
-autocmd BufRead,BufNew *.md set filetype=markdown
+autocmd BufRead,BufFilePre,BufNew *.md set filetype=markdown
 
 " Associate *.vstxml with XML syntax
-autocmd BufRead,BufNew *.vstxml set filetype=xml
+autocmd BufRead,BufFilePre,BufNew *.vstxml set filetype=xml
 
 " Enable wildmenu for better autocompletion
 set wildmenu
@@ -119,6 +119,7 @@ nmap <F1> <nop>
 
 " Set colorscheme
 set t_Co=256
+set termguicolors
 set background=dark
 colorscheme gruvbox
 
@@ -259,6 +260,9 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'scala', 'ruby',
 
 " }}}
 " Python-mode {{{
+
+" Disable rope
+let g:pymode_rope = 0
 
 " Disable linting to be compatible with Syntastic
 let g:pymode_lint = 0
