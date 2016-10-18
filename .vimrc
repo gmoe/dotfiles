@@ -55,20 +55,17 @@ set synmaxcol=256
 " Auto-read file if it has been edited externally
 set autoread
 
+" Enable wildmenu for better autocompletion
+set wildmenu
+
+" }}}
+" Filetype Detection {{{
+
 " Change the .md extension to Markdown
 autocmd BufRead,BufFilePre,BufNew *.md set filetype=markdown
 
 " Associate *.vstxml with XML syntax
 autocmd BufRead,BufFilePre,BufNew *.vstxml set filetype=xml
-
-" Enable wildmenu for better autocompletion
-set wildmenu
-
-" When viewing directories, show nested tree mode
-let g:netrw_liststyle=3
-
-" Don't create .netrwhist files
-let g:netrw_dirhistmax = 0
 
 " }}}
 " Key Bindings {{{
@@ -165,6 +162,21 @@ set wrap linebreak nolist
 
 " Display spaces before EOL as squares, hard tabs as arrows
 set listchars=trail:□,tab:→\ 
+
+" }}}
+" netrw {{{
+
+" Fix for netrw buffers sticking around
+autocmd FileType netrw setl bufhidden=delete
+
+" When viewing directories, show nested tree mode
+let g:netrw_liststyle=3
+
+" Don't create .netrwhist files
+let g:netrw_dirhistmax = 0
+
+" Turn off pointless banner
+let g:netrw_banner = 0
 
 " }}}
 " Lightline {{{
