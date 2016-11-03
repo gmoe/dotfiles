@@ -61,9 +61,6 @@ set wildmenu
 " }}}
 " Filetype Detection {{{
 
-" Change the .md extension to Markdown
-autocmd BufRead,BufFilePre,BufNew *.md set filetype=markdown
-
 " Associate *.vstxml with XML syntax
 autocmd BufRead,BufFilePre,BufNew *.vstxml set filetype=xml
 

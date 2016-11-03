@@ -22,11 +22,11 @@ antigen bundle colored-man-pages
 antigen bundle colorize
 antigen bundle cp
 
-# Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
-
 # Load the theme.
 antigen theme robbyrussell
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Tell antigen that you're done.
 antigen apply

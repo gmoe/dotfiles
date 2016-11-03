@@ -87,3 +87,6 @@
 [submodule ".vim/vim-pug"]
 	path = .vim/vim-pug
 	url = https://github.com/digitaltoad/vim-pug
+[submodule ".tmux/plugins/tmux-wifi-macos"]
+	path = .tmux/plugins/tmux-wifi-macos
+	url = https://github.com/gmoe/tmux-wifi-macos.git
