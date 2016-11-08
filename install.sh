@@ -10,14 +10,14 @@ git submodule update --init --recursive
 echo Linking dotfiles...
 
 # vim
-if [ ! -d "${BASEDIR}/.vim/" ]; then
+if [ ! -d "~/.vim/" ]; then
   echo No .vim directory found, making...
-  mkdir ${BASEDIR}/.vim
+  mkdir ~/.vim
 fi
 
-if [ ! -d "${BASEDIR}/.vim/" ]; then
-  echo No .vim bundle found, making...
-  mkdir ${BASEDIR}/.vim/bundle
+if [ ! -d "~/.lein/" ]; then
+  echo No .lein directory found, making...
+  mkdir ~/.lein
 fi
 
 ln -s -i ${BASEDIR}/.vimrc ~/.vimrc
