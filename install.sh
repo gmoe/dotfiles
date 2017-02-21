@@ -20,6 +20,11 @@ if [ ! -d "~/.lein/" ]; then
   mkdir ~/.lein
 fi
 
+if [ ! -d "~/.tmux/" ]; then
+  echo No .tmux directory found, making...
+  mkdir ~/.tmux
+fi
+
 ln -s -i ${BASEDIR}/.vimrc ~/.vimrc
 ln -s -i ${BASEDIR}/.vim/ ~/.vim/bundle
 
