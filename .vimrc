@@ -152,13 +152,16 @@ set showcmd
 set number
 
 " Set line numbers to be relative to current line location
-set relativenumber
+"set relativenumber
 
 " Turn on intelligent word wrapping
 set wrap linebreak nolist
 
 " Display spaces before EOL as squares, hard tabs as arrows
 set listchars=trail:□,tab:→\ 
+
+" Consider emoji characters to be full-width
+set emoji
 
 " }}}
 " netrw {{{
