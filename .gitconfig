@@ -3,3 +3,5 @@
 [user]
 	name = Griffin Moe
 	email = me@griffinmoe.com
+[core]
+	excludesfile = /Users/gmoe/.gitignore_global
