@@ -1,0 +1,5 @@
+.autoenv.zsh
+.autoenv_leave.zsh
+*.swp
+*.swo
+*.bak

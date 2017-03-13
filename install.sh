@@ -28,6 +28,7 @@ ln -s -i ${BASEDIR}/.zshrc ~/.zshrc
 
 # git
 ln -s -i ${BASEDIR}/.gitconfig ~/.gitconfig
+ln -s -i ${BASEDIR}/.gitignore_global ~/.gitignore_global
 
 # leiningen
 ln -s -i ${BASEDIR}/.lein/profiles.clj ~/.lein/profiles.clj
