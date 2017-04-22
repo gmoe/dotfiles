@@ -111,9 +111,13 @@ nmap <F1> <nop>
 " }}}
 " Visual + Colorscheme {{{
 
-" Set colorscheme
+" Adaptive color settings
 set t_Co=256
-set termguicolors
+if &term=~"xterm-256color"
+  set termguicolors
+endif
+
+" Set colorscheme
 set background=dark
 colorscheme gruvbox
 
