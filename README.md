@@ -1,10 +1,10 @@
-#Dotfiles
+# Dotfiles
 
 These are my personal configuration files for ZSH, vim, tmux, and Leiningen.
 They are meant to be used on both Linux and OS X. All files are kept in an
 isolated directory and sym-linked to their required locations.
 
-##Usage
+## Usage
 
 Clone this repository into your home directory and run the installation script:
 
@@ -21,7 +21,7 @@ Local customizations can be made by editing these files:
 * vim: `~/.vimrc_local`
 * tmux: `~/.tmux_local.conf`
 
-##License
+## License
 
 Copyright (c) 2015 Griffin Moe. Released under the MIT License. See [LICENSE.md][license].
 
