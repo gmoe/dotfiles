@@ -44,6 +44,9 @@ export LSCOLORS="dxfxgxdxexcxGxxxxxxxxx"
 # UNIX colors for ls
 export LS_COLORS="di=1;34:fi=0:ln=31:pi=36:so=36:bd=36:cd=36:or=31:mi=33:ex=35:*.rpm=90"
 
+# Always use color in grep
+export GREP_OPTIONS='--color=always'
+
 export EDITOR="vim"
 export DISABLE_AUTO_TITLE="true"
 
