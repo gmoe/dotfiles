@@ -310,14 +310,6 @@ let g:goyo_width=90
 let g:riv_disable_folding=1
 
 " }}}
-" Bufkill {{{
-
-" Replace bd, bun, bw with Bufkill
-cabbrev bd <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'BD' : 'bdelete')<CR>
-cabbrev bun <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'BUN' : 'bunload')<CR>
-cabbrev bw <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'BW' : 'bwipeout')<CR>
-
-" }}}
 " glsl.vim {{{
 
 " Add *.frag and *.vert as file extensions
