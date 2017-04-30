@@ -64,6 +64,9 @@ set wildmenu
 " Associate *.vstxml with XML syntax
 autocmd BufRead,BufFilePre,BufNew *.vstxml set filetype=xml
 
+" View control characters in CSV files
+autocmd BufNewFile,BufRead *.csv set list
+
 " }}}
 " Key Bindings {{{
 

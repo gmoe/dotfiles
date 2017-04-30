@@ -36,6 +36,8 @@ antigen bundle Tarrasch/zsh-autoenv
 # Tell antigen that you're done.
 antigen apply
 
+autoload -U zmv
+
 export CLICOLOR="xterm-color"
 
 # OS X / BSD colors for ls
