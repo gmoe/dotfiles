@@ -28,11 +28,6 @@ antigen theme robbyrussell
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Python autoenv
-export AUTOENV_HANDLE_LEAVE=1
-export AUTOENV_AUTH_FILE="~/.autoenv_authorized"
-antigen bundle Tarrasch/zsh-autoenv
-
 # Tell antigen that you're done.
 antigen apply
 
