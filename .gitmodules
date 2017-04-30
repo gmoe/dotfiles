@@ -27,10 +27,6 @@
 [submodule ".vim/riv.vim"]
 	path = .vim/riv.vim
 	url = https://github.com/Rykka/riv.vim
-[submodule ".vim/vim-bufkill"]
-	path = .vim/vim-bufkill
-	url = https://github.com/qpkorr/vim-bufkill
-  ignore = dirty
 [submodule ".vim/scvim"]
 	path = .vim/scvim
 	url = https://github.com/sbl/scvim
