@@ -14,6 +14,7 @@
 [submodule ".vim/goyo.vim"]
 	path = .vim/goyo.vim
 	url = https://github.com/junegunn/goyo.vim
+  ignore = dirty
 [submodule ".vim/gruvbox"]
 	path = .vim/gruvbox
 	url = https://github.com/morhetz/gruvbox
@@ -84,9 +85,6 @@
 [submodule ".tmux/plugins/tmux-resurrect"]
 	path = .tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect
-[submodule ".vim/vim-pug"]
-	path = .vim/vim-pug
-	url = https://github.com/digitaltoad/vim-pug
 [submodule ".tmux/plugins/tmux-wifi-macos"]
 	path = .tmux/plugins/tmux-wifi-macos
 	url = https://github.com/gmoe/tmux-wifi-macos.git
