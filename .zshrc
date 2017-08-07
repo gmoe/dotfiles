@@ -77,7 +77,7 @@ function zle-keymap-select zle-line-init
       set_cursor_shape 0 # block cursor
       ;;
     viins|main)
-      set_cursor_shape 1 # line cursor
+      set_cursor_shape 2 # flat cursor
       ;;
   esac
   zle reset-prompt
