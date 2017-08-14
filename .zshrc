@@ -74,10 +74,10 @@ function zle-keymap-select zle-line-init
 {
   case $KEYMAP in
     vicmd)
-      set_cursor_shape 0 # block cursor
+      set_cursor_shape 2 # flat cursor (normal)
       ;;
     viins|main)
-      set_cursor_shape 2 # flat cursor
+      set_cursor_shape 0 # block cursor (insert)
       ;;
   esac
   zle reset-prompt
