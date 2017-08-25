@@ -5,3 +5,5 @@
 	email = me@griffinmoe.com
 [core]
 	excludesfile = /Users/gmoe/.gitignore_global
+[diff]
+	tool = vimdiff
