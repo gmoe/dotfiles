@@ -47,6 +47,12 @@ export GREP_OPTIONS='--color=auto'
 # Vi-like mode
 bindkey -v
 
+bindkey '^r' history-incremental-search-backward
+bindkey '^w' backward-kill-word
+
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
 # Transition to Vi-mode set to 0.1s
 export KEYTIMEOUT=1
 
