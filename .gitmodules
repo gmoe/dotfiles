@@ -90,3 +90,6 @@
 [submodule ".vim/vim-mustache-handlebars"]
 	path = .vim/vim-mustache-handlebars
 	url = https://github.com/mustache/vim-mustache-handlebars
+[submodule ".vim/vim-ledger"]
+	path = .vim/vim-ledger
+	url = https://github.com/ledger/vim-ledger
