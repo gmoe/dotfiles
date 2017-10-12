@@ -1,9 +1,15 @@
 [push]
-	default = simple
+  default = simple
 [user]
-	name = Griffin Moe
-	email = me@griffinmoe.com
+  name = Griffin Moe
+  email = me@griffinmoe.com
 [core]
-	excludesfile = /Users/gmoe/.gitignore_global
+  excludesfile = /Users/gmoe/.gitignore_global
+  editor = vim
 [diff]
-	tool = vimdiff
+  tool = vimdiff
+[difftool]
+	prompt = 0
+[merge]
+  tool = vimdiff
+  conflictstyle = diff3
