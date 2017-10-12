@@ -132,7 +132,7 @@ set guioptions-=R
 set guioptions-=e
 
 " Set the font to something pretty 
-set guifont=Monaco\ for\ Powerline:h12
+set guifont=Hasklig\ Regular:h14
 
 " Always display statusline
 set laststatus=2
