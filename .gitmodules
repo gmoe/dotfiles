@@ -93,3 +93,6 @@
 [submodule ".vim/vim-ledger"]
 	path = .vim/vim-ledger
 	url = https://github.com/ledger/vim-ledger
+[submodule ".vim/emmet-vim"]
+	path = .vim/emmet-vim
+	url = https://github.com/mattn/emmet-vim
