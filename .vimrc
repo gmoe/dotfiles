@@ -289,6 +289,12 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'scala', 'ruby',
 " }}}
 " Python-mode {{{
 
+" Tell python-mode to shut up
+let g:pymode_warnings = 0
+
+" Disable virtualenv
+let g:pymode_virtualenv = 0
+
 " Disable rope
 let g:pymode_rope = 0
 
