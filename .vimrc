@@ -67,6 +67,15 @@ autocmd BufRead,BufFilePre,BufNew *.vstxml set filetype=xml
 " View control characters in CSV files
 autocmd BufNewFile,BufRead *.csv set list
 
+" Support inline Handlebars in JS files
+augroup js_inline_hbs
+  autocmd!
+  autocmd BufNewFile,BufRead *.js syn include @hbs syntax/mustache.vim
+  autocmd BufNewFile,BufRead *.js syn region inlineHandlebars matchgroup=jsTaggedTemplate start=+hbs\`+ skip=+\\`+ end=+\`+ containedIn=ALLBUT,jsComment contains=@hbs
+augroup END
+
+" autocmd BufRead,BufFilePre,BufNewFile *.js HighlightInlineHbs
+
 " }}}
 " Key Bindings {{{
 
