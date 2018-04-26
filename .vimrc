@@ -331,6 +331,12 @@ let g:riv_disable_folding=1
 let g:glsl_file_extensions = '*.glsl,*.vsh,*.fsh,*.frag,*.vert'
 
 " }}}
+" vim-javascript {{{
+
+" Enable JSDoc syntax highlighting
+let g:javascript_plugin_jsdoc = 1
+
+" }}}
 
 " local customizations in ~/.vimrc_local
 let $LOCALFILE=expand("~/.vimrc_local")
