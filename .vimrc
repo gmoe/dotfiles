@@ -173,8 +173,12 @@ set number
 " Turn on intelligent word wrapping
 set wrap linebreak nolist
 
-" Display spaces before EOL as squares, hard tabs as arrows
-set listchars=trail:□,tab:→\ 
+" Line-breaks denoted with special character
+set showbreak=↪\
+
+" Display spaces before EOL as dots, wraps with chevrons
+set list
+set listchars=trail:•,extends:⟩,precedes:⟨
 
 " Consider emoji characters to be full-width
 set emoji
