@@ -99,3 +99,12 @@
 [submodule ".vim/vim-htmlbars-inline-syntax"]
 	path = .vim/vim-htmlbars-inline-syntax
 	url = https://github.com/dustinfarris/vim-htmlbars-inline-syntax
+[submodule ".vim/vim-commentary"]
+	path = .vim/vim-commentary
+	url = git://github.com/tpope/vim-commentary.git
+[submodule ".vim/vim-surround"]
+	path = .vim/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule ".vim/vim-repeat"]
+	path = .vim/vim-repeat
+	url = git@github.com:tpope/vim-repeat.git
