@@ -50,7 +50,7 @@ set ttyfast
 syntax sync minlines=256
 
 " Don't syntax highlight long lines, better performance
-set synmaxcol=256
+" set synmaxcol=256
 
 " Auto-read file if it has been edited externally
 set autoread
@@ -339,6 +339,13 @@ let g:glsl_file_extensions = '*.glsl,*.vsh,*.fsh,*.frag,*.vert'
 
 " Enable JSDoc syntax highlighting
 let g:javascript_plugin_jsdoc = 1
+
+" }}}
+
+" vim-jsx {{{
+
+" Only enable JSX highlighting w/ extension
+let g:jsx_ext_required = 1
 
 " }}}
 
