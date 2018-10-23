@@ -17,6 +17,7 @@ syntax enable
 
 " No Vim-generated files
 set nobackup
+set backupcopy=yes
 
 " Keeps buffers open in the background
 set hidden
@@ -57,6 +58,7 @@ set autoread
 
 " Enable wildmenu for better autocompletion
 set wildmenu
+set wildignorecase
 
 " }}}
 " Filetype Detection {{{
@@ -153,6 +155,9 @@ set laststatus=2
 
 " Offset the screen while scrolling to keep the cursor centered
 set scrolloff=999
+
+" Resize splits when the terminal dimensions change
+autocmd VimResized * wincmd =
 
 " Turn on visual bells
 set visualbell
