@@ -76,7 +76,12 @@ augroup js_inline_hbs
   autocmd BufNewFile,BufRead *.js syn region inlineHandlebars matchgroup=jsTaggedTemplate start=+hbs\`+ skip=+\\`+ end=+\`+ containedIn=ALLBUT,jsComment contains=@hbs
 augroup END
 
-" autocmd BufRead,BufFilePre,BufNewFile *.js HighlightInlineHbs
+" Support style tags in SVG files
+augroup svg_inline_style
+  autocmd!
+  autocmd BufNewFile,BufRead *.svg syn include @svgCSS syntax/css.vim
+  autocmd BufNewFile,BufRead *.svg syn region svgStyleTag matchgroup=xmlTag start=+<style+ contained end=+</style>+ contains=@svgCSS
+augroup END
 
 " }}}
 " Key Bindings {{{
