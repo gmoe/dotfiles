@@ -277,18 +277,18 @@ endif
 " }}}
 " Vim-Startify {{{
 
-" guifg=base00 
-hi default link StartifyHeader Number 
+" guifg=base00
+hi default link StartifyHeader Number
 autocmd FileType startify setlocal buftype=
 
 let g:startify_custom_header = [
-                \ '   __  __                        ________  __ __      ',
-                \ '  /\ \/\ \  __                  /\_____  \/\ \\ \     ',
-                \ '  \ \ \ \ \/\_\    ___ ___      \/___// / \ \ \\ \    ',
-                \ '   \ \ \ \ \/\ \ /  __` __`\        /  /   \ \ \\ \_  ',
-                \ '    \ \ \_/ \ \ \/\ \/\ \/\ \      /  / __  \ \__  __\',
-                \ '     \ `\___/\ \_\ \_\ \_\ \_\    /\_/ /\_\  \/_/\_\_/',
-                \ '      `\/__/  \/_/\/_/\/_/\/_/    \//  \/_/     \/_/  ',
+                \ '   __  __                       ',
+                \ '  /\ \/\ \  __                  ',
+                \ '  \ \ \ \ \/\_\    ___ ___      ',
+                \ '   \ \ \ \ \/\ \ /  __` __`\    ',
+                \ '    \ \ \_/ \ \ \/\ \/\ \/\ \   ',
+                \ '     \ `\___/\ \_\ \_\ \_\ \_\  ',
+                \ '      `\/__/  \/_/\/_/\/_/\/_/  ',
                 \ '',
                 \ ''
                 \ ]
@@ -298,25 +298,18 @@ let g:startify_custom_footer = ['',''] + map(split(system('fortune'), '\n'), '" 
 " Vim-markdown {{{
 
 " Enable syntax highlighting for fenced code blocks
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'scala', 'ruby', 'clojure']
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'scala', 'ruby', 'clojure', 'javascript', 'javascript.jsx']
 
 " }}}
 " Python-mode {{{
 
 " Tell python-mode to shut up
 let g:pymode_warnings = 0
-
-" Disable virtualenv
 let g:pymode_virtualenv = 0
-
-" Disable rope
 let g:pymode_rope = 0
-
-" Disable linting to be compatible with Syntastic
 let g:pymode_lint = 0
-
-" Disable the annoying fold default
 let g:pymode_folding = 0
+let g:pymode_breakpoint = 0
 " }}}
 " Bufstop {{{
 
@@ -351,7 +344,6 @@ let g:glsl_file_extensions = '*.glsl,*.vsh,*.fsh,*.frag,*.vert'
 let g:javascript_plugin_jsdoc = 1
 
 " }}}
-
 " vim-jsx {{{
 
 " Only enable JSX highlighting w/ extension
