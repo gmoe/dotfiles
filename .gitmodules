@@ -102,9 +102,6 @@
 [submodule ".vim/vim-repeat"]
 	path = .vim/vim-repeat
 	url = git@github.com:tpope/vim-repeat.git
-[submodule ".vim/vim-jsx"]
-	path = .vim/vim-jsx
-	url = https://github.com/mxw/vim-jsx
 [submodule ".vim/vim-jsx-pretty"]
 	path = .vim/vim-jsx-pretty
 	url = https://github.com/MaxMEllon/vim-jsx-pretty
