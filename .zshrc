@@ -106,6 +106,9 @@ zle -N zle-keymap-select
 export EDITOR="vim"
 export DISABLE_AUTO_TITLE="true"
 
+# Tell ack to look for project-local ack configs
+export ACKRC=".ackrc"
+
 # Allow local customizations in the ~/.zshrc_local_after file
 if [ -f ~/.zshrc_local_after ]; then
   source ~/.zshrc_local_after
