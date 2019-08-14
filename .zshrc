@@ -8,19 +8,12 @@ source ~/.dotfiles/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle github
 antigen bundle mercurial
 antigen bundle pip
 antigen bundle pyenv
-antigen bundle pylint
-antigen bundle python
-antigen bundle lein
-antigen bundle npm
 antigen bundle command-not-found
 antigen bundle colored-man-pages
 antigen bundle colorize
-antigen bundle cp
 
 # Load the theme.
 antigen theme robbyrussell
