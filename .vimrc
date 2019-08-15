@@ -127,6 +127,31 @@ noremap <CR> :noh<CR>
 " Disable the annoying help function on <F1>
 nmap <F1> <nop>
 
+" Linter binding
+noremap <Leader>e :call ESLintFileExternal()<cr>
+function! ESLintFileExternal()
+  if (&ft=='javascript' || &ft=='javascript.jsx')
+    " Find local eslint, otherwise use global binary
+    let npmPath = trim(system("npm root 2>&1"))
+    if (exists('npmPath'))
+      let linter = system(npmPath . "/.bin/eslint " . bufname("%") . " 2>&1")
+    else
+      let linter = system("eslint " . bufname("%") . " 2>&1")
+    endif
+  elseif (&ft=='python')
+    let linter = system("pylint -r n " . bufname("%") . " 2>&1")
+  endif
+  if (exists('linter'))
+    split __ESLint_Results__
+    normal! ggdG
+    setlocal buftype=nofile
+    setlocal bufhidden=delete
+    call append(0, split(linter, '\v\n'))
+  else
+    echo "File type not supported by available linters"
+  endif
+endfunction
+
 " }}}
 " Visual + Colorscheme {{{
 
