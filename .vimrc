@@ -130,7 +130,7 @@ nmap <F1> <nop>
 " Linter binding
 noremap <Leader>e :call ESLintFileExternal()<cr>
 function! ESLintFileExternal()
-  if (&ft=='javascript' || &ft=='javascript.jsx')
+  if (&ft=='javascript' || &ft=='javascript.jsx' || &ft=='javascriptreact')
     " Find local eslint, otherwise use global binary
     let npmPath = trim(system("npm root 2>&1"))
     if (exists('npmPath'))
