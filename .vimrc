@@ -140,6 +140,14 @@ function! ESLintFileExternal()
     endif
   elseif (&ft=='python')
     let linter = system("pylint -r n " . bufname("%") . " 2>&1")
+  elseif (&ft=='scss' || &ft=='sass')
+    " Find local sass-lint, otherwise use global binary
+    let npmPath = trim(system("npm root 2>&1"))
+    if (exists('npmPath'))
+      let linter = system(npmPath . "/.bin/sass-lint --verbose --no-exit " . bufname("%") . " 2>&1")
+    else
+      let linter = system("sass-lint --verbose --no-exit " . bufname("%") . " 2>&1")
+    endif
   endif
   if (exists('linter'))
     split __ESLint_Results__
