@@ -1,19 +1,11 @@
-# Allow local customizations in the ~/.zshrc_local_before file
-if [ -f ~/.zshrc_local_before ]; then
-    source ~/.zshrc_local_before
-fi
-
 # Load antigen
 source ~/.dotfiles/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle mercurial
-antigen bundle pip
+# antigen bundle pip
 antigen bundle pyenv
-antigen bundle command-not-found
 antigen bundle colored-man-pages
-antigen bundle colorize
 
 # Load the theme.
 antigen theme robbyrussell
@@ -24,7 +16,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # Tell antigen that you're done.
 antigen apply
 
-autoload -U zmv
+# autoload -U zmv
 
 export CLICOLOR="xterm-color"
 
