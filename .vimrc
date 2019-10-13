@@ -160,6 +160,30 @@ function! ESLintFileExternal()
   endif
 endfunction
 
+" Linter fix binding
+noremap <Leader>f :call ESLintFileExternal()<cr>
+function! ESLintFileExternal()
+  if (&ft=='javascript' || &ft=='javascript.jsx' || &ft=='javascriptreact')
+    " Find local eslint, otherwise use global binary
+    let npmPath = trim(system("npm root 2>&1"))
+    if (exists('npmPath'))
+      let linter = system(npmPath . "/.bin/eslint --fix " . bufname("%") . " 2>&1")
+    else
+      let linter = system("eslint --fix " . bufname("%") . " 2>&1")
+    endif
+  endif
+  if (exists('linter'))
+    split __ESLint_Results__
+    normal! ggdG
+    setlocal buftype=nofile
+    setlocal bufhidden=delete
+    call append(0, split(linter, '\v\n'))
+    checktime
+  else
+    echo "File type not supported by available autofixable linters"
+  endif
+endfunction
+
 " }}}
 " Visual + Colorscheme {{{
 
