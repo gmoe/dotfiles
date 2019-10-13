@@ -1,5 +1,5 @@
 # Load antigen
-source ~/.dotfiles/antigen/antigen.zsh
+. ~/.dotfiles/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
@@ -51,5 +51,5 @@ export ACKRC=".ackrc"
 
 # Allow local customizations in the ~/.zshrc_local_after file
 if [ -f ~/.zshrc_local_after ]; then
-  source ~/.zshrc_local_after
+  . ~/.zshrc_local_after
 fi
