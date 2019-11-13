@@ -12,6 +12,9 @@ antigen theme robbyrussell
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+# History search
+antigen bundle zsh-users/zsh-history-substring-search
+
 # Tell antigen that you're done.
 antigen apply
 
@@ -28,14 +31,13 @@ export LS_COLORS="di=1;34:fi=0:ln=31:pi=36:so=36:bd=36:cd=36:or=31:mi=33:ex=35:*
 # Always use color in grep
 export GREP_OPTIONS='--color=auto'
 
-# Vi-like mode
-bindkey -v
-
-bindkey '^r' history-incremental-search-backward
-bindkey '^w' backward-kill-word
-
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+# Better history search bindings
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 # More visible vi-mode indicator
 export MODE_INDICATOR="%{$fg_bold[blue]%}<NORMAL>%{$reset_color%}"
