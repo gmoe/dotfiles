@@ -161,8 +161,8 @@ function! ESLintFileExternal()
 endfunction
 
 " Linter fix binding
-noremap <Leader>f :call ESLintFileExternal()<cr>
-function! ESLintFileExternal()
+noremap <Leader>f :call ESLintFileExternalFix()<cr>
+function! ESLintFileExternalFix()
   if (&ft=='javascript' || &ft=='javascript.jsx' || &ft=='javascriptreact')
     " Find local eslint, otherwise use global binary
     let npmPath = trim(system("npm root 2>&1"))
