@@ -105,3 +105,9 @@
 [submodule ".vim/vim-jsx-pretty"]
 	path = .vim/vim-jsx-pretty
 	url = https://github.com/MaxMEllon/vim-jsx-pretty
+[submodule ".vim/vim-graphql"]
+	path = .vim/vim-graphql
+	url = https://github.com/jparise/vim-graphql
+[submodule ".vim/vim-tidal"]
+	path = .vim/vim-tidal
+	url = git@github.com:tidalcycles/vim-tidal.git

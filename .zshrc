@@ -18,8 +18,6 @@ antigen bundle zsh-users/zsh-history-substring-search
 # Tell antigen that you're done.
 antigen apply
 
-# autoload -U zmv
-
 export CLICOLOR="xterm-color"
 
 # OS X / BSD colors for ls
@@ -50,6 +48,9 @@ export DISABLE_AUTO_TITLE="true"
 
 # Tell ack to look for project-local ack configs
 export ACKRC=".ackrc"
+
+# Add vim-tidal to path
+export PATH="$HOME/.dotfiles/.vim/vim-tidal/bin:$PATH"
 
 # Allow local customizations in the ~/.zshrc_local_after file
 if [ -f ~/.zshrc_local_after ]; then

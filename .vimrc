@@ -407,6 +407,14 @@ let g:javascript_plugin_jsdoc = 1
 let g:jsx_ext_required = 1
 
 " }}}
+" vim-tidal {{{
+
+" Default tmux pane is incorrect (session: tidal, window 1, pane 2)
+let g:tidal_default_config = {"socket_name": "default", "target_pane": "tidal:1.2"}
+
+" let g:tidal_no_mappings = 1
+
+" }}}
 
 " local customizations in ~/.vimrc_local
 let $LOCALFILE=expand("~/.vimrc_local")
