@@ -131,20 +131,18 @@ nmap <F1> <nop>
 noremap <Leader>e :call ESLintFileExternal()<cr>
 function! ESLintFileExternal()
   if (&ft=='javascript' || &ft=='javascript.jsx' || &ft=='javascriptreact')
-    " Find local eslint, otherwise use global binary
-    let npmPath = trim(system("npm root 2>&1"))
-    if (exists('npmPath'))
-      let linter = system(npmPath . "/.bin/eslint " . bufname("%") . " 2>&1")
+    " Recursively find local eslint, otherwise use global binary
+    if (!empty(findfile('node_modules/.bin/eslint', '.;')))
+      let linter = system(findfile('node_modules/.bin/eslint', '.;') . " " . bufname("%") . " 2>&1")
     else
       let linter = system("eslint " . bufname("%") . " 2>&1")
     endif
   elseif (&ft=='python')
     let linter = system("pylint -r n " . bufname("%") . " 2>&1")
   elseif (&ft=='scss' || &ft=='sass')
-    " Find local sass-lint, otherwise use global binary
-    let npmPath = trim(system("npm root 2>&1"))
-    if (exists('npmPath'))
-      let linter = system(npmPath . "/.bin/sass-lint --verbose --no-exit " . bufname("%") . " 2>&1")
+    " Recursively find local sass-lint, otherwise use global binary
+    if (!empty(findfile('node_modules/.bin/sass-lint', '.;')))
+      let linter = system(findfile('node_modules/.bin/sass-lint', '.;') . " --verbose --no-exit " . bufname("%") . " 2>&1")
     else
       let linter = system("sass-lint --verbose --no-exit " . bufname("%") . " 2>&1")
     endif
@@ -165,9 +163,8 @@ noremap <Leader>f :call ESLintFileExternalFix()<cr>
 function! ESLintFileExternalFix()
   if (&ft=='javascript' || &ft=='javascript.jsx' || &ft=='javascriptreact')
     " Find local eslint, otherwise use global binary
-    let npmPath = trim(system("npm root 2>&1"))
-    if (exists('npmPath'))
-      let linter = system(npmPath . "/.bin/eslint --fix " . bufname("%") . " 2>&1")
+    if (!empty(findfile('node_modules/.bin/eslint', '.;')))
+      let linter = system(findfile('node_modules/.bin/eslint', '.;') . " " . bufname("%") . " 2>&1")
     else
       let linter = system("eslint --fix " . bufname("%") . " 2>&1")
     endif
