@@ -160,7 +160,7 @@ function! ESLintFileExternal()
     let &filetype = linterBuffType
     call append(0, split(linter, '\v\n'))
   else
-    echo "File type not supported by available linters"
+    echo "File type \"" . &ft . "\" not supported by available linters"
   endif
 endfunction
 
@@ -186,7 +186,7 @@ function! ESLintFileExternalFix()
     call append(0, split(linter, '\v\n'))
     checktime
   else
-    echo "File type not supported by available autofixable linters"
+    echo "File type \"" . &ft . "\" not supported by available linters"
   endif
 endfunction
 
