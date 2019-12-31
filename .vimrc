@@ -131,27 +131,33 @@ nmap <F1> <nop>
 noremap <Leader>e :call ESLintFileExternal()<cr>
 function! ESLintFileExternal()
   if (&ft=='javascript' || &ft=='javascript.jsx' || &ft=='javascriptreact')
+    let linterBuffType = 'eslint'
     " Recursively find local eslint, otherwise use global binary
-    if (!empty(findfile('node_modules/.bin/eslint', '.;')))
-      let linter = system(findfile('node_modules/.bin/eslint', '.;') . " " . bufname("%") . " 2>&1")
+    let localESLint = findfile('node_modules/.bin/eslint', '.;')
+    if (!empty(localESLint))
+      let linter = system(localESLint . " " . bufname("%") . " 2>&1")
     else
       let linter = system("eslint " . bufname("%") . " 2>&1")
     endif
   elseif (&ft=='python')
+    let linterBuffType = 'pylint'
     let linter = system("pylint -r n " . bufname("%") . " 2>&1")
   elseif (&ft=='scss' || &ft=='sass')
+    let linterBuffType = 'sass-lint'
     " Recursively find local sass-lint, otherwise use global binary
-    if (!empty(findfile('node_modules/.bin/sass-lint', '.;')))
-      let linter = system(findfile('node_modules/.bin/sass-lint', '.;') . " --verbose --no-exit " . bufname("%") . " 2>&1")
+    let localSasslint = findfile('node_modules/.bin/sass-lint', '.;')
+    if (!empty(localSasslint))
+      let linter = system(localSasslint . " --verbose --no-exit " . bufname("%") . " 2>&1")
     else
       let linter = system("sass-lint --verbose --no-exit " . bufname("%") . " 2>&1")
     endif
   endif
   if (exists('linter'))
-    split __ESLint_Results__
+    split __Linter_Results__
     normal! ggdG
     setlocal buftype=nofile
     setlocal bufhidden=delete
+    let &filetype = linterBuffType
     call append(0, split(linter, '\v\n'))
   else
     echo "File type not supported by available linters"
@@ -162,18 +168,21 @@ endfunction
 noremap <Leader>f :call ESLintFileExternalFix()<cr>
 function! ESLintFileExternalFix()
   if (&ft=='javascript' || &ft=='javascript.jsx' || &ft=='javascriptreact')
+    let linterBuffType = 'eslint'
     " Find local eslint, otherwise use global binary
-    if (!empty(findfile('node_modules/.bin/eslint', '.;')))
-      let linter = system(findfile('node_modules/.bin/eslint', '.;') . " " . bufname("%") . " 2>&1")
+    let localESLint = findfile('node_modules/.bin/eslint', '.;')
+    if (!empty(localESLint))
+      let linter = system(localESLint . " " . bufname("%") . " 2>&1")
     else
       let linter = system("eslint --fix " . bufname("%") . " 2>&1")
     endif
   endif
   if (exists('linter'))
-    split __ESLint_Results__
+    split __Linter_Results__
     normal! ggdG
     setlocal buftype=nofile
     setlocal bufhidden=delete
+    let &filetype = linterBuffType
     call append(0, split(linter, '\v\n'))
     checktime
   else

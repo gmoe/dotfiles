@@ -111,3 +111,6 @@
 [submodule ".vim/vim-tidal"]
 	path = .vim/vim-tidal
 	url = git@github.com:tidalcycles/vim-tidal.git
+[submodule ".vim/vim-eslint-syntax"]
+	path = .vim/vim-eslint-syntax
+	url = git@github.com:gmoe/vim-eslint-syntax.git
