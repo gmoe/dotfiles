@@ -23,6 +23,6 @@ Local customizations can be made by editing these files:
 
 ## License
 
-Copyright (c) 2015 Griffin Moe. Released under the MIT License. See [LICENSE.md][license].
+Copyright (c) 2020 Griffin Moe. Released under the MIT License. See [LICENSE.md][license].
 
 [license]: LICENSE.md
