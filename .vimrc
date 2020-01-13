@@ -63,6 +63,9 @@ set wildignorecase
 " }}}
 " Filetype Detection {{{
 
+" Turn on spell-check for git commit messages
+autocmd BufRead,BufFilePre,BufNew COMMIT_EDITMSG set spell
+
 " Associate *.vstxml with XML syntax
 autocmd BufRead,BufFilePre,BufNew *.vstxml set filetype=xml
 
