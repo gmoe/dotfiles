@@ -72,6 +72,12 @@ autocmd BufRead,BufFilePre,BufNew *.vstxml set filetype=xml
 " View control characters in CSV files
 autocmd BufNewFile,BufRead *.csv set list
 
+" See .sasslintrc files as JSON
+autocmd BufNewFile,BufRead .sasslintrc set filetype=json
+
+" See .gitignore as .gitconfig files, not completely accurate but suitable
+autocmd BufNewFile,BufRead .gitignore set filetype=gitconfig
+
 " Support inline Handlebars in JS files
 augroup js_inline_hbs
   autocmd!
