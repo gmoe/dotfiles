@@ -69,8 +69,9 @@ autocmd BufRead,BufFilePre,BufNew COMMIT_EDITMSG set spell
 " Associate *.vstxml with XML syntax
 autocmd BufRead,BufFilePre,BufNew *.vstxml set filetype=xml
 
-" View control characters in CSV files
+" View control characters in CSV/TSV files
 autocmd BufNewFile,BufRead *.csv set list
+autocmd BufNewFile,BufRead *.tsv set list
 
 " See .sasslintrc files as JSON
 autocmd BufNewFile,BufRead .sasslintrc set filetype=json
