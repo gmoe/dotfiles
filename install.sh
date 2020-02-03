@@ -15,11 +15,6 @@ if [ ! -d "~/.vim/" ]; then
   mkdir ~/.vim
 fi
 
-if [ ! -d "~/.lein/" ]; then
-  echo No .lein directory found, making...
-  mkdir ~/.lein
-fi
-
 ln -s -i ${BASEDIR}/.vimrc ~/.vimrc
 ln -s -i ${BASEDIR}/.vim/ ~/.vim/bundle
 
@@ -29,9 +24,6 @@ ln -s -i ${BASEDIR}/.zshrc ~/.zshrc
 # git
 ln -s -i ${BASEDIR}/.gitconfig ~/.gitconfig
 ln -s -i ${BASEDIR}/.gitignore_global ~/.gitignore_global
-
-# leiningen
-ln -s -i ${BASEDIR}/.lein/profiles.clj ~/.lein/profiles.clj
 
 # tmux
 ln -s -i ${BASEDIR}/.tmux/ ~/.tmux
