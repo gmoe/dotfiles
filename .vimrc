@@ -34,6 +34,9 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
+" Speed up delay between inputs
+set timeoutlen=1000 ttimeoutlen=0
+
 " Turn on auto-ident
 set autoindent
 set smartindent
