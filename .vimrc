@@ -273,7 +273,8 @@ set emoji
 " netrw {{{
 
 " Fix for netrw buffers sticking around
-autocmd FileType netrw setl bufhidden=delete
+autocmd FileType netrw setl bufhidden=wipe
+autocmd FileType netrw setl nobuflisted
 
 " When viewing directories, show nested tree mode
 let g:netrw_liststyle=3
