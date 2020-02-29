@@ -155,6 +155,9 @@ function! ESLintFileExternal()
   elseif (&ft=='python')
     let linterBuffType = 'pylint'
     let linter = system("pylint -r n " . bufname("%") . " 2>&1")
+  elseif (&ft=='sh')
+    let linterBuffType = 'shellcheck'
+    let linter = system("shellcheck " . bufname("%") . " 2>&1")
   elseif (&ft=='scss' || &ft=='sass')
     let linterBuffType = 'sass-lint'
     " Recursively find local sass-lint, otherwise use global binary
