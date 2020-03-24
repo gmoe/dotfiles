@@ -76,9 +76,6 @@ autocmd BufRead,BufFilePre,BufNew *.vstxml set filetype=xml
 autocmd BufNewFile,BufRead *.csv set list
 autocmd BufNewFile,BufRead *.tsv set list
 
-" See .sasslintrc files as JSON
-autocmd BufNewFile,BufRead .sasslintrc set filetype=json
-
 " See .gitignore as .gitconfig files, not completely accurate but suitable
 autocmd BufNewFile,BufRead .gitignore set filetype=gitconfig
 
@@ -158,14 +155,14 @@ function! ESLintFileExternal()
   elseif (&ft=='sh')
     let linterBuffType = 'shellcheck'
     let linter = system("shellcheck " . bufname("%") . " 2>&1")
-  elseif (&ft=='scss' || &ft=='sass')
-    let linterBuffType = 'sass-lint'
+  elseif (&ft=='scss' || &ft=='sass' || &ft=='less' || &ft=='css')
+    let linterBuffType = 'stylelint'
     " Recursively find local sass-lint, otherwise use global binary
-    let localSasslint = findfile('node_modules/.bin/sass-lint', '.;')
-    if (!empty(localSasslint))
-      let linter = system(localSasslint . " --verbose --no-exit " . bufname("%") . " 2>&1")
+    let localStylelint = findfile('node_modules/.bin/stylelint', '.;')
+    if (!empty(localStylelint))
+      let linter = system(localStylelint . " " . bufname("%") . " 2>&1")
     else
-      let linter = system("sass-lint --verbose --no-exit " . bufname("%") . " 2>&1")
+      let linter = system("stylelint " . bufname("%") . " 2>&1")
     endif
   endif
   if (exists('linter'))

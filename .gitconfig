@@ -6,15 +6,13 @@
 [core]
   excludesfile = /Users/gmoe/.gitignore_global
   editor = vim
-[diff]
-  tool = vimdiff
-[difftool]
-  prompt = 0
-[merge]
-  tool = vimdiff
-  conflictstyle = diff3
 [blame]
   coloring = highlightRecent
   date = short
 [alias]
   pr = "!pr() { [[ \"$#\" -eq  \"2\" ]] && git fetch upstream pull/$1/head:$2 || echo 'format: git pr <pr-id> <local-branch-name'; }; pr"
+  conflicts = "diff --relative='./' --name-only --diff-filter=U"
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
