@@ -119,6 +119,10 @@ noremap <Leader>j <C-w>j
 noremap <Leader>h <C-w>h
 noremap <Leader>l <C-w>l
 
+" Use jk to navigate keyword autocomplete
+inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
+inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
+
 " Leader-b opens the buffer list, prompts for which buffer to open
 " :map <leader>b :ls<CR>:b
 
