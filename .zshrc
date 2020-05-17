@@ -1,32 +1,16 @@
-# Load antigen
 . ~/.dotfiles/antigen/antigen.zsh
+
 antigen use oh-my-zsh
-
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle vi-mode # vi-mode indicator
+antigen bundle vi-mode
 antigen bundle colored-man-pages
-
-# Load the theme.
 antigen theme robbyrussell
-
-# Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
-
-# History search
 antigen bundle zsh-users/zsh-history-substring-search
-
-# Tell antigen that you're done.
 antigen apply
 
 export CLICOLOR="xterm-color"
-
-# OS X / BSD colors for ls
 export LSCOLORS="dxfxgxdxexcxGxxxxxxxxx"
-
-# UNIX colors for ls
 export LS_COLORS="di=1;34:fi=0:ln=31:pi=36:so=36:bd=36:cd=36:or=31:mi=33:ex=35:*.rpm=90"
-
-# Always use color in grep
 export GREP_OPTIONS='--color=auto'
 
 # Better history search bindings
@@ -46,7 +30,6 @@ export KEYTIMEOUT=1
 export EDITOR="vim"
 export DISABLE_AUTO_TITLE="true"
 
-# Tell ack to look for project-local ack configs
 export ACKRC=".ackrc"
 
 # Add vim-tidal to path
