@@ -52,7 +52,9 @@ export ACKRC=".ackrc"
 # Add vim-tidal to path
 export PATH="$HOME/.dotfiles/.vim/vim-tidal/bin:$PATH"
 
-# Allow local customizations in the ~/.zshrc_local_after file
+export HOMEBREW_BUNDLE_FILE="$HOME/.Brewfile"
+
+# Allow per-machine customizations
 if [ -f ~/.zshrc_local_after ]; then
   . ~/.zshrc_local_after
 fi

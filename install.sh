@@ -9,6 +9,9 @@ git submodule update --init --recursive
 
 echo Linking dotfiles...
 
+ln -s -i ${BASEDIR}/Brewfile ~/.Brewfile
+touch ~/.Brewfile.local
+
 # vim
 if [ ! -d "~/.vim/" ]; then
   echo No .vim directory found, making...

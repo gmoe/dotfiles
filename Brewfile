@@ -1,0 +1,28 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "beeftornado/rmtree"
+
+brew "ack"
+brew "cabal-install"
+brew "cmake"
+brew "gcc"
+brew "git"
+brew "loc"
+brew "sqlite"
+brew "python"
+brew "shellcheck"
+brew "tmux"
+brew "vim"
+brew "zsh"
+
+cask "font-fira-code"
+cask "gimp"
+cask "mactex"
+cask "macvim"
+cask "mgba"
+cask "multipatch"
+
+instance_eval(File.read("./.Brewfile.local"))

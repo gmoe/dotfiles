@@ -15,8 +15,8 @@ cd ~/.dotfiles
 ```
 
 Local customizations can be made by editing these files:
-  
-* ZSH: `~/.zshrc_local_before`, runs before `.zshrc`
+
+* Homebrew: `~/.Brewfile.local`
 * ZSH: `~/.zshrc_local_after`, runs after `.zshrc`
 * vim: `~/.vimrc_local`
 * tmux: `~/.tmux_local.conf`

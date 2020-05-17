@@ -79,6 +79,9 @@ autocmd BufNewFile,BufRead *.tsv set list
 " See .gitignore as .gitconfig files, not completely accurate but suitable
 autocmd BufNewFile,BufRead .gitignore set filetype=gitconfig
 
+" See Brewfiles as Ruby files
+autocmd BufNewFile,BufRead *Brewfile* set filetype=ruby
+
 " Support inline Handlebars in JS files
 augroup js_inline_hbs
   autocmd!
