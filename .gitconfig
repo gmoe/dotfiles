@@ -6,6 +6,7 @@
 [core]
   excludesfile = /Users/gmoe/.gitignore_global
   editor = vim
+  untrackedCache = true
 [blame]
   coloring = highlightRecent
   date = short
@@ -14,5 +15,6 @@
   conflicts = "diff --relative='./' --name-only --diff-filter=U"
 [diff]
   tool = vimdiff
+  algorithm = histogram
 [difftool]
   prompt = false
