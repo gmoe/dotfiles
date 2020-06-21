@@ -8,6 +8,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 antigen apply
 
+export HOMEBREW_BUNDLE_FILE="$HOME/.Brewfile"
+
 export CLICOLOR="xterm-color"
 export LSCOLORS="dxfxgxdxexcxGxxxxxxxxx"
 export LS_COLORS="di=1;34:fi=0:ln=31:pi=36:so=36:bd=36:cd=36:or=31:mi=33:ex=35:*.rpm=90"
@@ -35,7 +37,7 @@ export ACKRC=".ackrc"
 # Add vim-tidal to path
 export PATH="$HOME/.dotfiles/.vim/vim-tidal/bin:$PATH"
 
-export HOMEBREW_BUNDLE_FILE="$HOME/.Brewfile"
+alias clang-tidy="$(brew --prefix llvm)/bin/clang-tidy" clang-format="$(brew --prefix llvm)/bin/clang-format"
 
 # Allow per-machine customizations
 if [ -f ~/.zshrc_local_after ]; then
