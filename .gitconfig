@@ -20,3 +20,5 @@
   algorithm = histogram
 [difftool]
   prompt = false
+[init]
+  defaultBranch = main
