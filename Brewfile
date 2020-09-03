@@ -35,4 +35,4 @@ cask "mactex"
 cask "mgba"
 cask "multipatch"
 
-instance_eval(File.read("./.Brewfile.local"))
+instance_eval(File.read(File.join(Dir.home, ".Brewfile.local")))
