@@ -34,5 +34,6 @@ cask "standard-notes"
 cask "mactex"
 cask "mgba"
 cask "multipatch"
+cask "vlc"
 
 instance_eval(File.read(File.join(Dir.home, ".Brewfile.local")))
