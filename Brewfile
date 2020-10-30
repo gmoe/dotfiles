@@ -36,5 +36,6 @@ cask "mactex"
 cask "mgba"
 cask "multipatch"
 cask "vlc"
+cask "zsa-wally"
 
 instance_eval(File.read(File.join(Dir.home, ".Brewfile.local")))
