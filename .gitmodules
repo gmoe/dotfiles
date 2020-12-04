@@ -111,3 +111,6 @@
 [submodule ".vim/vim-eslint-syntax"]
 	path = .vim/vim-eslint-syntax
 	url = git@github.com:gmoe/vim-eslint-syntax.git
+[submodule ".tmux/plugins/tmux-wifi"]
+	path = .tmux/plugins/tmux-wifi
+	url = git@github.com:gmoe/tmux-wifi.git
