@@ -1,3 +1,7 @@
+require './prompt'
+
+roles = get_roles
+
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -22,8 +26,6 @@ brew "vim"
 brew "zsh"
 
 cask "bitwarden"
-cask "elektron-overbridge"
-cask "elektron-transfer"
 cask "firefox"
 cask "focusrite-control"
 cask "font-fira-code"
@@ -33,9 +35,17 @@ cask "sketch"
 cask "slack"
 cask "standard-notes"
 cask "mactex"
-cask "mgba"
-cask "multipatch"
 cask "vlc"
 cask "zsa-wally"
+
+if roles.include?("music") then
+  cask "elektron-overbridge"
+  cask "elektron-transfer"
+end
+
+if roles.include?("games") then
+  cask "mgba"
+  cask "multipatch"
+end
 
 instance_eval(File.read(File.join(Dir.home, ".Brewfile.local")))
