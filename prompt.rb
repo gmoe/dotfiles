@@ -69,11 +69,14 @@ end
 
 def get_roles()
   if File.exists?($roles_file_name) then
-    return File.read($roles_file_name).split
+    roles = File.read($roles_file_name).split
+    puts "Using roles: #{roles}"
+    return roles
   else
     prompt while($user_is_selecting)
-    selected_opts = $roles.filter { |role| role[:selected] }.map { |role| role[:name] }
-    File.write($roles_file_name, selected_opts.join("\n"))
-    return selected_opts
+    roles = $roles.filter { |role| role[:selected] }.map { |role| role[:name] }
+    File.write($roles_file_name, roles.join("\n"))
+    puts "Using roles: #{roles}"
+    return roles
   end
 end
