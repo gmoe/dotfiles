@@ -11,6 +11,7 @@ echo Linking dotfiles...
 
 ln -s -i ${BASEDIR}/Brewfile ~/.Brewfile
 touch ~/.Brewfile.local
+brew bundle
 
 # vim
 if [ ! -d "~/.vim/" ]; then
@@ -31,3 +32,7 @@ ln -s -i ${BASEDIR}/.gitignore_global ~/.gitignore_global
 # tmux
 ln -s -i ${BASEDIR}/.tmux/ ~/.tmux
 ln -s -i ${BASEDIR}/.tmux.conf ~/.tmux.conf
+
+# Pre-compile
+autoload -Uz compinit
+zcompile antigen/bin/antigen.zsh
