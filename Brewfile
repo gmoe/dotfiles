@@ -10,6 +10,9 @@ tap "homebrew/services"
 tap "homebrew/cask-drivers"
 tap "beeftornado/rmtree"
 
+mas "Xcode", id: 497799835
+mas "Deliveries", id: 290986013
+
 brew "ack"
 brew "cabal-install"
 brew "cmake"
@@ -17,6 +20,7 @@ brew "gcc"
 brew "git"
 brew "llvm"
 brew "loc"
+brew "mas"
 brew "node"
 brew "sqlite"
 brew "python"
