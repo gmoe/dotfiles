@@ -82,13 +82,6 @@ autocmd BufNewFile,BufRead .gitignore set filetype=gitconfig
 " See Brewfiles as Ruby files
 autocmd BufNewFile,BufRead *Brewfile* set filetype=ruby
 
-" Support inline Handlebars in JS files
-augroup js_inline_hbs
-  autocmd!
-  autocmd BufNewFile,BufRead *.js syn include @hbs syntax/mustache.vim
-  autocmd BufNewFile,BufRead *.js syn region inlineHandlebars matchgroup=jsTaggedTemplate start=+hbs\`+ skip=+\\`+ end=+\`+ containedIn=ALLBUT,jsComment contains=@hbs
-augroup END
-
 " Support style tags in SVG files
 augroup svg_inline_style
   autocmd!
@@ -372,7 +365,7 @@ let g:startify_custom_footer = ['',''] + map(split(system('fortune'), '\n'), '" 
 " Vim-markdown {{{
 
 " Enable syntax highlighting for fenced code blocks
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'scala', 'ruby', 'clojure', 'javascript', 'javascript.jsx']
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'scala', 'ruby', 'clojure', 'javascript']
 
 " }}}
 " Python-mode {{{
