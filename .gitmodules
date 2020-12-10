@@ -105,3 +105,6 @@
 [submodule ".tmux/plugins/tmux-wifi"]
 	path = .tmux/plugins/tmux-wifi
 	url = git@github.com:gmoe/tmux-wifi.git
+[submodule ".vim/vim-js"]
+	path = .vim/vim-js
+	url = git@github.com:yuezk/vim-js.git
