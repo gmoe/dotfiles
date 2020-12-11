@@ -407,8 +407,8 @@ let g:glsl_file_extensions = '*.glsl,*.vsh,*.fsh,*.frag,*.vert'
 " }}}
 " vim-javascript {{{
 
-" Enable JSDoc syntax highlighting
 let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
 
 " }}}
 " vim-jsx {{{
