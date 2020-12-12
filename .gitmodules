@@ -108,3 +108,6 @@
 [submodule ".vim/vim-js"]
 	path = .vim/vim-js
 	url = git@github.com:yuezk/vim-js.git
+[submodule ".vim/vim-soul"]
+	path = .vim/vim-soul
+	url = git@github.com:gmoe/vim-soul.git
