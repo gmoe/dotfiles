@@ -1,6 +1,6 @@
 require './prompt'
 
-roles = get_roles
+roles = BrewRoles.prompt_for_roles
 
 tap "homebrew/bundle"
 tap "homebrew/cask"
