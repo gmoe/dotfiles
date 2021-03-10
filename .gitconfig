@@ -13,7 +13,7 @@
 [alias]
   pr = "!pr() { [[ \"$#\" -eq  \"2\" ]] && git fetch upstream pull/$1/head:$2 || echo 'format: git pr <pr-id> <local-branch-name'; }; pr"
   conflicts = "diff --relative='./' --name-only --diff-filter=U"
-  fork-point = "!fp() { [[ \"$#\" -eq \"1\" ]] && git merge-base $1 HEAD || git merge-base upstream/master HEAD; }; fp"
+  fork-point = "!fp() { [[ \"$#\" -eq \"1\" ]] && git merge-base $1 HEAD || git merge-base origin/master HEAD; }; fp"
   new = !git init && git symbolic-ref HEAD refs/heads/main
 [diff]
   tool = vimdiff
@@ -22,3 +22,5 @@
   prompt = false
 [init]
   defaultBranch = main
+[rerere]
+  enabled = true
