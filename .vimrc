@@ -177,26 +177,26 @@ function! ESLintFileExternal()
   endif
 endfunction
 
-" Linter fix binding
-noremap <Leader>f :call ESLintFileExternalFix()<cr>
-function! ESLintFileExternalFix()
+" Run flow against JS code
+noremap <Leader>f :call JSFlowCheck()<cr>
+function! JSFlowCheck()
   if (&ft=='javascript' || &ft=='javascript.jsx' || &ft=='javascriptreact')
-    let linterBuffType = 'eslint'
-    " Find local eslint, otherwise use global binary
-    let localESLint = findfile('node_modules/.bin/eslint', '.;')
-    if (!empty(localESLint))
-      let linter = system(localESLint . " " . bufname("%") . " 2>&1")
+    let linterBuffType = 'flow'
+    " Find local flow, otherwise use global binary
+    let localFlow = findfile('node_modules/.bin/flow', '.;')
+    if (!empty(localFlow))
+      let flowBin = system(localFlow . " " . bufname("%") . " 2>&1")
     else
-      let linter = system("eslint --fix " . bufname("%") . " 2>&1")
+      let flowBin = system("flow --fix " . bufname("%") . " 2>&1")
     endif
   endif
-  if (exists('linter'))
+  if (exists('flowBin'))
     split __Linter_Results__
     normal! ggdG
     setlocal buftype=nofile
     setlocal bufhidden=delete
     let &filetype = linterBuffType
-    call append(0, split(linter, '\v\n'))
+    call append(0, split(flowBin, '\v\n'))
     checktime
   else
     echo "File type \"" . &ft . "\" not supported by available linters"
