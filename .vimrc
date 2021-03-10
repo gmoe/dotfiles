@@ -342,26 +342,6 @@ function! MyModified()
 endfunction
 
 " }}}
-" Vim-Startify {{{
-
-" guifg=base00
-hi default link StartifyHeader Number
-autocmd FileType startify setlocal buftype=
-
-let g:startify_custom_header = [
-                \ '   __  __                       ',
-                \ '  /\ \/\ \  __                  ',
-                \ '  \ \ \ \ \/\_\    ___ ___      ',
-                \ '   \ \ \ \ \/\ \ /  __` __`\    ',
-                \ '    \ \ \_/ \ \ \/\ \/\ \/\ \   ',
-                \ '     \ `\___/\ \_\ \_\ \_\ \_\  ',
-                \ '      `\/__/  \/_/\/_/\/_/\/_/  ',
-                \ '',
-                \ ''
-                \ ]
-let g:startify_custom_footer = ['',''] + map(split(system('fortune'), '\n'), '"   ". v:val')
-
-" }}}
 " Vim-markdown {{{
 
 " Enable syntax highlighting for fenced code blocks

@@ -54,9 +54,6 @@
 [submodule ".vim/vim-scala"]
 	path = .vim/vim-scala
 	url = https://github.com/derekwyatt/vim-scala/
-[submodule ".vim/vim-startify"]
-	path = .vim/vim-startify
-	url = https://github.com/mhinz/vim-startify
 [submodule ".vim/vim-vinegar"]
 	path = .vim/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar
