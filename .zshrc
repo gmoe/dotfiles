@@ -6,6 +6,7 @@ antigen bundle colored-man-pages
 antigen theme robbyrussell
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle mfaerevaag/wd
 antigen apply
 
 export HOMEBREW_BUNDLE_FILE="$HOME/.Brewfile"
