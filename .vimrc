@@ -63,6 +63,9 @@ set autoread
 set wildmenu
 set wildignorecase
 
+" Hide intro
+set shortmess+=I
+
 " }}}
 " Filetype Detection {{{
 
