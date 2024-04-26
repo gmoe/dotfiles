@@ -32,6 +32,9 @@ ln -s -f -i ${BASEDIR}/.gitignore_global ~/.gitignore_global
 ln -s -f -i ${BASEDIR}/.tmux/ ~/.tmux
 ln -s -f -i ${BASEDIR}/.tmux.conf ~/.tmux.conf
 
+# npm
+ln -s -f -i ${BASEDIR}/.npmrc ~/.npmrc
+
 # Pre-compile
 autoload -Uz compinit
 zcompile antigen/bin/antigen.zsh
