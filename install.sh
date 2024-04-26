@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo Updating submodules...
@@ -9,29 +8,29 @@ git submodule update --init --recursive
 
 echo Linking dotfiles...
 
-ln -s -i ${BASEDIR}/Brewfile ~/.Brewfile
+ln -s -f -i ${BASEDIR}/Brewfile ~/.Brewfile
 touch ~/.Brewfile.local
 brew bundle
 
 # vim
 if [ ! -d "~/.vim/" ]; then
   echo No .vim directory found, making...
-  mkdir ~/.vim
+  mkdir -p ~/.vim
 fi
 
-ln -s -i ${BASEDIR}/.vimrc ~/.vimrc
-ln -s -i ${BASEDIR}/.vim/ ~/.vim/bundle
+ln -s -f -i ${BASEDIR}/.vimrc ~/.vimrc
+ln -s -f -i ${BASEDIR}/.vim/ ~/.vim/bundle
 
 # zsh
-ln -s -i ${BASEDIR}/.zshrc ~/.zshrc
+ln -s -f -i ${BASEDIR}/.zshrc ~/.zshrc
 
 # git
-ln -s -i ${BASEDIR}/.gitconfig ~/.gitconfig
-ln -s -i ${BASEDIR}/.gitignore_global ~/.gitignore_global
+ln -s -f -i ${BASEDIR}/.gitconfig ~/.gitconfig
+ln -s -f -i ${BASEDIR}/.gitignore_global ~/.gitignore_global
 
 # tmux
-ln -s -i ${BASEDIR}/.tmux/ ~/.tmux
-ln -s -i ${BASEDIR}/.tmux.conf ~/.tmux.conf
+ln -s -f -i ${BASEDIR}/.tmux/ ~/.tmux
+ln -s -f -i ${BASEDIR}/.tmux.conf ~/.tmux.conf
 
 # Pre-compile
 autoload -Uz compinit
