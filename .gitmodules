@@ -111,3 +111,6 @@
 [submodule ".vim/vim-mdx-js"]
 	path = .vim/vim-mdx-js
 	url = git@github.com:jxnblk/vim-mdx-js.git
+[submodule ".vim/yats.vim"]
+	path = .vim/yats.vim
+	url = https://github.com/HerringtonDarkholme/yats.vim
