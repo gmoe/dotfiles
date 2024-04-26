@@ -85,6 +85,9 @@ autocmd BufNewFile,BufRead .gitignore set filetype=gitconfig
 " See Brewfiles as Ruby files
 autocmd BufNewFile,BufRead *Brewfile* set filetype=ruby
 
+" See any file containing 'Dockerfile' as a dockerfile
+autocmd BufNewFile,BufRead *Dockerfile* set filetype=dockerfile
+
 " Support style tags in SVG files
 augroup svg_inline_style
   autocmd!
