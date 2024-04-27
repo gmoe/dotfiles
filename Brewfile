@@ -16,6 +16,7 @@ mas "Deliveries", id: 290986013
 brew "ack"
 brew "cabal-install"
 brew "cmake"
+brew "direnv"
 brew "gcc"
 brew "git"
 brew "llvm"
@@ -30,6 +31,7 @@ brew "vim"
 brew "zsh"
 
 cask "bitwarden"
+cask "discord"
 cask "firefox"
 cask "focusrite-control"
 cask "font-fira-code"
@@ -40,11 +42,11 @@ cask "slack"
 cask "standard-notes"
 cask "mactex"
 cask "vlc"
-cask "zsa-wally"
 
 if roles.include?("music") then
   cask "elektron-overbridge"
   cask "elektron-transfer"
+  cask "cycling74-max"
 end
 
 if roles.include?("games") then
