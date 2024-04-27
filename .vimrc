@@ -72,6 +72,9 @@ set shortmess+=I
 " Turn on spell-check for git commit messages
 autocmd BufRead,BufFilePre,BufNew COMMIT_EDITMSG set spell
 
+" Turn on spell-check for markdown files
+autocmd BufRead,BufFilePre,BufNew *.md set spell
+
 " Associate *.vstxml with XML syntax
 autocmd BufRead,BufFilePre,BufNew *.vstxml set filetype=xml
 
