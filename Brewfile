@@ -3,11 +3,7 @@ require './prompt'
 roles = BrewRoles.prompt_for_roles
 
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "homebrew/services"
-tap "homebrew/cask-drivers"
 tap "beeftornado/rmtree"
 
 mas "Xcode", id: 497799835
