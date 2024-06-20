@@ -149,7 +149,7 @@ nmap <F1> <nop>
 " Linter binding
 noremap <Leader>e :call ESLintFileExternal()<cr>
 function! ESLintFileExternal()
-  if (&ft=='javascript' || &ft=='javascript.jsx' || &ft=='javascriptreact')
+  if (&ft=='javascript' || &ft=='javascript.jsx' || &ft=='javascriptreact' || &ft=='typescript' || &ft=='typescriptreact')
     let linterBuffType = 'eslint'
     " Recursively find local eslint, otherwise use global binary
     let localESLint = findfile('node_modules/.bin/eslint', '.;')
@@ -186,26 +186,26 @@ function! ESLintFileExternal()
   endif
 endfunction
 
-" Run flow against JS code
-noremap <Leader>f :call JSFlowCheck()<cr>
-function! JSFlowCheck()
-  if (&ft=='javascript' || &ft=='javascript.jsx' || &ft=='javascriptreact')
-    let linterBuffType = 'flow'
-    " Find local flow, otherwise use global binary
-    let localFlow = findfile('node_modules/.bin/flow', '.;')
-    if (!empty(localFlow))
-      let flowBin = system(localFlow . " " . bufname("%") . " 2>&1")
+" Run Typescript type checker
+noremap <Leader>t :call TSTypeCheck()<cr>
+function! TSTypeCheck()
+  if (&ft=='typescript' || &ft=='typescriptreact')
+    let linterBuffType = 'typescript'
+    " Find local tsc, otherwise use global binary
+    let localTsc = findfile('node_modules/.bin/tsc', '.;')
+    if (!empty(localTsc))
+      let tscBin = system(localTsc . " --noEmit " . bufname("%") . " 2>&1")
     else
-      let flowBin = system("flow --fix " . bufname("%") . " 2>&1")
+      let tscBin = system("tsc --noEmit " . bufname("%") . " 2>&1")
     endif
   endif
-  if (exists('flowBin'))
+  if (exists('tscBin'))
     split __Linter_Results__
     normal! ggdG
     setlocal buftype=nofile
     setlocal bufhidden=delete
     let &filetype = linterBuffType
-    call append(0, split(flowBin, '\v\n'))
+    call append(0, split(tscBin, '\v\n'))
     checktime
   else
     echo "File type \"" . &ft . "\" not supported by available linters"
