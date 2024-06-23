@@ -1,0 +1,9 @@
+ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/vi-mode
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:themes/robbyrussell.zsh-theme
+
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
+
+mfaerevaag/wd

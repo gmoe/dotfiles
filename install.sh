@@ -23,6 +23,7 @@ ln -s -f -i ${BASEDIR}/.vim/ ~/.vim/bundle
 
 # zsh
 ln -s -f -i ${BASEDIR}/.zshrc ~/.zshrc
+ln -s -f -i ${BASEDIR}/zsh_plugins.txt ~/.zsh_plugins.txt
 
 # git
 ln -s -f -i ${BASEDIR}/.gitconfig ~/.gitconfig

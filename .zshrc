@@ -1,13 +1,8 @@
-. ~/.dotfiles/antigen/antigen.zsh
+autoload -Uz compinit
+compinit
 
-antigen use oh-my-zsh
-antigen bundle vi-mode
-antigen bundle colored-man-pages
-antigen theme robbyrussell
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-history-substring-search
-antigen bundle mfaerevaag/wd
-antigen apply
+source ~/.dotfiles/antidote/antidote.zsh
+antidote load
 
 export HOMEBREW_BUNDLE_FILE="$HOME/.Brewfile"
 
