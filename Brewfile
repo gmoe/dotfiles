@@ -6,9 +6,6 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 tap "beeftornado/rmtree"
 
-mas "Xcode", id: 497799835
-mas "Deliveries", id: 290986013
-
 brew "ack"
 brew "direnv"
 brew "gcc"
@@ -24,6 +21,9 @@ brew "shellcheck"
 brew "tmux"
 brew "vim"
 brew "zsh"
+
+mas "Xcode", id: 497799835
+mas "Deliveries", id: 290986013
 
 cask "bitwarden"
 cask "discord"
@@ -50,7 +50,7 @@ if roles.include?("games") then
   cask "multipatch"
 end
 
-if roles.include("latex") then
+if roles.include?("latex") then
   cask "mactex"
 end
 

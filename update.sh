@@ -1,9 +1,5 @@
 #!/bin/zsh
 
 git pull
-git submodule update --init --remote
+git submodule update
 brew bundle
-
-# Pre-compile
-autoload -Uz compinit
-zcompile antigen/bin/antigen.zsh

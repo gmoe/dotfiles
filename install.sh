@@ -4,7 +4,8 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo Updating submodules...
 
-git submodule update --init --recursive
+git submodule sync --init --recursive
+git submodule update
 
 echo Linking dotfiles...
 
