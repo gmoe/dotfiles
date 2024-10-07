@@ -18,6 +18,11 @@ module BrewRoles
       name: 'games',
       description: 'Video game tooling',
       selected: false
+    },
+    {
+      name: 'latex',
+      description: 'Install MacTex',
+      selected: false,
     }
   ]
 

@@ -10,8 +10,6 @@ mas "Xcode", id: 497799835
 mas "Deliveries", id: 290986013
 
 brew "ack"
-brew "cabal-install"
-brew "cmake"
 brew "direnv"
 brew "gcc"
 brew "git"
@@ -19,6 +17,7 @@ brew "llvm"
 brew "loc"
 brew "mas"
 brew "node"
+brew "nvm"
 brew "sqlite"
 brew "python"
 brew "shellcheck"
@@ -29,14 +28,15 @@ brew "zsh"
 cask "bitwarden"
 cask "discord"
 cask "firefox"
+cask "figma"
 cask "focusrite-control"
 cask "font-fira-code"
 cask "gimp"
 cask "iterm2"
-cask "sketch"
+cask "obsidian"
+cask "signal"
 cask "slack"
 cask "standard-notes"
-cask "mactex"
 cask "vlc"
 
 if roles.include?("music") then
@@ -48,6 +48,10 @@ end
 if roles.include?("games") then
   cask "mgba"
   cask "multipatch"
+end
+
+if roles.include("latex") then
+  cask "mactex"
 end
 
 instance_eval(File.read(File.join(Dir.home, ".Brewfile.local")))
