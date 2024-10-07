@@ -8,6 +8,7 @@ tap "beeftornado/rmtree"
 
 brew "ack"
 brew "direnv"
+brew "dockutil"
 brew "gcc"
 brew "git"
 brew "llvm"

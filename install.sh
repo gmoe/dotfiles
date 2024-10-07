@@ -37,6 +37,8 @@ ln -s -f -i ${BASEDIR}/.tmux.conf ~/.tmux.conf
 # npm
 ln -s -f -i ${BASEDIR}/.npmrc ~/.npmrc
 
-# Pre-compile
-autoload -Uz compinit
-zcompile antigen/bin/antigen.zsh
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  echo "Adding gruvbox to iTerm2, you will need to set this and Fira Code in your profile"
+  open ${BASEDIR}/gruvbox.itermcolors
+  ./macos.sh
+fi
