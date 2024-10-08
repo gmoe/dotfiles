@@ -31,6 +31,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   # Set Caps Lock to Control
   hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc": 0x700000039, "HIDKeyboardModifierMappingDst": 0x7000000E0}]}' > /dev/null 2>&1
 
+  # Faster trackpad tracking
+  defaults write com.apple.trackpad.scaling -int 1
+
   # Sane trackpad gestures
   defaults write com.apple.AppleMultitouchTrackpad "TrackpadThreeFingerDrag" -int 1
   defaults write com.apple.AppleMultitouchTrackpad "TrackpadThreeFingerHorizSwipeGesture" -int 0
