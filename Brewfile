@@ -25,6 +25,7 @@ brew "zsh"
 
 mas "Xcode", id: 497799835
 mas "Deliveries", id: 290986013
+mas "Things 3", id: 904280696
 
 cask "bitwarden"
 cask "discord"
